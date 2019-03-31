@@ -1,0 +1,1 @@
+<form action="{{ route('save_url') }}"method="post">    @csrf<input type="text" name="url"><input type="submit" name="sbtn"></form><p>    @foreach($urls as $url)        <p> <a href="{{ route('testRedirect',$url->code) }}">{{$url->url}}{{$url->code}}</a></p>        @endforeach</p>
